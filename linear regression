@@ -1,0 +1,7 @@
+from sklearn import datasets
+import pandas as pd
+
+boston_data = datasets.fetch_california_housing()
+df_boston = pd.DataFrame(boston_data.data,columns=boston_data.feature_names)
+df_boston['target'] = pd.Series(boston_data.target)
+df_boston.head()
